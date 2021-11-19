@@ -35,6 +35,24 @@ function FormulaireClient() {
 		surfaceDuLogement: null,
 	})
 	const [revenueFiscal, setRevenueFiscal] = useState('')
+
+	const send = () => {
+		console.log({
+			nom,
+			prenom,
+			ville,
+			dateDeNaissance,
+			adresse,
+			ville,
+			codePostale,
+			nombreDePersonne,
+			appartOuMaison,
+			logementDeuxAns,
+			besoins,
+			energieSolaireDetails,
+			revenueFiscal,
+		})
+	}
 	return (
 		<>
 			<div className="Upper-body">
@@ -158,6 +176,7 @@ function FormulaireClient() {
 			<TranscheFiscal
 				revenueFiscal={revenueFiscal}
 				setRevenueFiscal={setRevenueFiscal}
+				send={send}
 			/>
 		</>
 	)

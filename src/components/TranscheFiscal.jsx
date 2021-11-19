@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/PersonnesEtLogement.css'
 
-function TranscheFiscal({ setRevenueFiscal, revenueFiscal }) {
+function TranscheFiscal({ setRevenueFiscal, revenueFiscal, send }) {
 	return (
 		<div className="personne-container">
 			<label className="margin-bottom">Tranche de revenu fiscal ?</label>
@@ -36,7 +36,9 @@ function TranscheFiscal({ setRevenueFiscal, revenueFiscal }) {
 				</button>
 			</div>
 			<div className="submit">
-				<button className="check-out">DEMANDER UN DEVIS</button>
+				<button className="check-out" onClick={send()}>
+					DEMANDER UN DEVIS
+				</button>
 				<p>un expert travaux prendre contact avec vous sous 48H</p>
 			</div>
 		</div>
