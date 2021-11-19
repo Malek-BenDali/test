@@ -1,0 +1,41 @@
+.App-logo {
+	max-width: 15%;
+	max-height: 90%;
+}
+.container {
+	display: flex;
+	height: 20vh;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 0 2vw;
+	box-shadow: -2px -2px 22px 3px rgba(97, 97, 97, 0.48);
+}
+
+li {
+	font-size: 1.2rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	list-style: none;
+	color: #313131e5;
+	cursor: pointer;
+}
+
+button {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(9, 121, 12, 1) 0%,
+		rgba(164, 255, 0, 1) 100%
+	);
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 12px;
+	display: inline-block;
+	font-size: 1.2vw;
+	margin: 4px 2px;
+	cursor: pointer;
+}
