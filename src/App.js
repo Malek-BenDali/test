@@ -1,10 +1,10 @@
-import './App.css'
-import { Navbar } from './components'
+import { Navbar, FormulaireClient } from './components'
 
 function App() {
 	return (
 		<>
 			<Navbar />
+			<FormulaireClient />
 		</>
 	)
 }
