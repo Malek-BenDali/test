@@ -1,4 +1,10 @@
 import React, { useState } from 'react'
+import {
+	PersonnesEtLogement,
+	Besoins,
+	EnergieSolaire,
+	TranscheFiscal,
+} from '../components'
 import '../styles/Formulaire.css'
 
 function FormulaireClient() {
@@ -9,6 +15,26 @@ function FormulaireClient() {
 	const [adresse, setAdresse] = useState('')
 	const [ville, setVille] = useState('')
 	const [codePostale, setCodePostale] = useState('')
+	const [nombreDePersonne, setNombreDePersonne] = useState(null)
+	const [appartOuMaison, setAppartOuMaison] = useState(null)
+	const [logementDeuxAns, setLogementDeuxAns] = useState(true)
+	const [besoins, setBesoins] = useState({
+		isolation: false,
+		renovation: false,
+		bilanEnergitique: false,
+		chauffage: false,
+		energieSolaire: false,
+		ventilation: false,
+		purificateurDair: false,
+		deceteurCo: false,
+		bomeDeRecharge: false,
+		prime: false,
+	})
+	const [energieSolaireDetails, setEnergieSolaireDetails] = useState({
+		type: null,
+		surfaceDuLogement: null,
+	})
+	const [revenueFiscal, setRevenueFiscal] = useState('')
 	return (
 		<>
 			<div className="Upper-body">
@@ -114,6 +140,25 @@ function FormulaireClient() {
 					</div>
 				</div>
 			</form>
+			<PersonnesEtLogement
+				nombreDePersonne={nombreDePersonne}
+				setNombreDePersonne={setNombreDePersonne}
+				appartOuMaison={appartOuMaison}
+				setAppartOuMaison={setAppartOuMaison}
+				logementDeuxAns={logementDeuxAns}
+				setLogementDeuxAns={setLogementDeuxAns}
+			/>
+			<Besoins besoins={besoins} setBesoins={setBesoins} />
+			{besoins.energieSolaire && (
+				<EnergieSolaire
+					energieSolaireDetails={energieSolaireDetails}
+					setEnergieSolaireDetails={setEnergieSolaireDetails}
+				/>
+			)}
+			<TranscheFiscal
+				revenueFiscal={revenueFiscal}
+				setRevenueFiscal={setRevenueFiscal}
+			/>
 		</>
 	)
 }

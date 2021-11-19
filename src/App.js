@@ -1,4 +1,4 @@
-import { Navbar, FormulaireClient } from './components'
+import { Navbar, FormulaireClient } from './container'
 
 function App() {
 	return (
