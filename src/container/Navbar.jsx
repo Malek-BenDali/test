@@ -2,9 +2,9 @@ import React from 'react'
 import logo from '../images/logo.jpg'
 import '../styles/Nav.css'
 
-function Navbar() {
+function Navbar({ navRef }) {
 	return (
-		<div className="container">
+		<div className="container" ref={navRef}>
 			<img src={logo} className="App-logo" alt="logo" />
 			<li>Espace Particulier</li>
 			<li>Espace Partenaire RGE</li>

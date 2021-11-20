@@ -4,7 +4,7 @@
 }
 .container {
 	display: flex;
-	height: 20vh;
+	height: 150px;
 	align-items: center;
 	justify-content: space-evenly;
 	padding: 0 2vw;

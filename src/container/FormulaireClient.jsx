@@ -43,7 +43,6 @@ function FormulaireClient() {
 			ville,
 			dateDeNaissance,
 			adresse,
-			ville,
 			codePostale,
 			nombreDePersonne,
 			appartOuMaison,

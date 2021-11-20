@@ -3,7 +3,7 @@ import '../styles/PersonnesEtLogement.css'
 
 function TranscheFiscal({ setRevenueFiscal, revenueFiscal, send }) {
 	return (
-		<div className="personne-container">
+		<div className="personne-container" id="energieSolaire">
 			<label className="margin-bottom">Tranche de revenu fiscal ?</label>
 			<div className="buttons">
 				<button
